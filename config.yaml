@@ -1,0 +1,42 @@
+# Default model configuration
+model:
+  input_shape: [1, 1]
+  num_layers: 2
+  units: 128
+  dropout_rate: 0.2
+  use_bidirectional: true
+  attention_type: "bahdanau"
+  learning_rate: 0.001
+
+# Training configuration
+training:
+  epochs: 100
+  batch_size: 32
+  patience: 10
+  train_ratio: 0.8
+  val_ratio: 0.1
+  window_size: 1
+
+# Data configuration
+data:
+  n_steps: 500
+  x0: 0.1
+
+# API configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+  workers: 1
+
+# Optimization configuration
+hyperopt:
+  n_trials: 50
+  timeout: null
+  study_name: "ann_hyperopt"
+
+# Paths
+paths:
+  models_dir: "models"
+  data_dir: "data"
+  explanations_dir: "explanations"
