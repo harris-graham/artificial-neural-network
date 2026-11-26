@@ -50,6 +50,12 @@ An advanced prediction system for chaotic time series using attention-enhanced n
 
 ### Installation
 
+This project uses TensorFlow 2.15, which requires Python 3.10 or 3.11. The
+GitHub Codespaces configuration selects Python 3.10 and installs the project
+dependencies when the Codespace is created. After adding this configuration to
+an existing Codespace, run **Codespaces: Rebuild Container** from the Command
+Palette so it switches to the supported Python version.
+
 ```bash
 # Clone the repository
 git clone https://github.com/harris/artificial-neural-network.git

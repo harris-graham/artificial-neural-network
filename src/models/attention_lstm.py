@@ -19,7 +19,7 @@ class ModelConfig(BaseModel):
     units: int = Field(default=128, ge=32, le=512)
     dropout_rate: float = Field(default=0.2, ge=0.0, le=0.5)
     use_bidirectional: bool = True
-    attention_type: str = Field(default="bahdanau", regex="^(bahdanau|luong)$")
+    attention_type: str = Field(default="bahdanau", pattern="^(bahdanau|luong)$")
     learning_rate: float = Field(default=0.001, ge=0.0001, le=0.01)
     use_attention: bool = True
 

@@ -55,7 +55,7 @@ class TrainRequest(BaseModel):
     model_type: str = Field(
         default="attention_lstm",
         description="Type of model to train",
-        regex="^(lstm|attention_lstm|gru|attention_gru|transformer)$",
+        pattern="^(lstm|attention_lstm|gru|attention_gru|transformer)$",
     )
     A: float = Field(..., description="Logistic map parameter A", ge=0, le=4)
     hyperparameters: Optional[Dict[str, Any]] = Field(
@@ -178,7 +178,7 @@ class InterpretRequest(BaseModel):
     method: str = Field(
         default="shap",
         description="Interpretation method",
-        regex="^(shap|lime|attention)$",
+        pattern="^(shap|lime|attention)$",
     )
     num_samples: int = Field(default=10, description="Number of samples to analyze", ge=1, le=100)
     window_size: int = Field(default=1, description="Sliding window size", ge=1, le=10)
@@ -273,7 +273,7 @@ class HyperoptRequest(BaseModel):
     model_type: str = Field(
         default="attention_lstm",
         description="Model type to optimize",
-        regex="^(lstm|attention_lstm|gru|attention_gru|transformer)$",
+        pattern="^(lstm|attention_lstm|gru|attention_gru|transformer)$",
     )
     A: float = Field(..., description="Logistic map parameter A", ge=0, le=4)
     n_trials: int = Field(default=50, description="Number of optimization trials", ge=10, le=200)
