@@ -13,7 +13,7 @@ pydantic-settings>=2.1.0,<3.0.0
 httpx>=0.25.0,<0.30.0
 
 # Interpretability
-shap>=0.42.0,<0.43.0
+shap>=0.42.0,<0.50.0
 lime>=0.2.0,<0.3.0
 
 # Hyperparameter optimization
